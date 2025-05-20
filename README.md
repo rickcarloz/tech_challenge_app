@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+# 💻 Tech Challenge - Fase 4
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bem-vindo ao repositório do **Tech Challenge - Fase 4**!  
+Siga os passos abaixo para configurar e rodar o projeto corretamente no seu ambiente.
 
-## Get started
+---
 
-1. Install dependencies
+## ✅ Pré-requisitos
 
-   ```bash
-   npm install
-   ```
+Antes de começar, verifique se você possui as seguintes ferramentas instaladas:
 
-2. Start the app
+- [Node.js](https://nodejs.org/) versão **20.18.1 ou superior**
+- [Docker](https://www.docker.com/)
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🚀 Como executar o projeto
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1️⃣ Clone o repositório
 
 ```bash
-npm run reset-project
+git clone https://github.com/rickcarloz/tech_challenge_app
+cd tech_challenge_app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### 2️⃣ Configure as variáveis de ambiente
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Localize o arquivo `.env.example` na raiz do projeto.  
+2. Faça uma cópia dele e renomeie para `.env`.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+#### ⚠️ Atenção:
+A variável `EXPO_PUBLIC_CORS_ORIGIN` **deve ser configurada com o IP local da sua máquina**, por exemplo:
 
-## Join the community
+```env
+EXPO_PUBLIC_CORS_ORIGIN=http://192.168.0.6:3000
+```
 
-Join our community of developers creating universal apps.
+As demais variáveis podem ser mantidas com os valores do arquivo `.env.example`.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+### 3️⃣ Instale as dependências
+
+No diretório do projeto, execute:
+
+```bash
+npm install
+```
+
+---
+
+### 4️⃣ Inicie o backend e o banco de dados com Docker
+
+Execute o comando abaixo para subir os containers:
+
+```bash
+docker compose up -d
+```
+
+---
+
+### 5️⃣ Rode o aplicativo
+
+Para iniciar a aplicação:
+
+```bash
+npm run start
+```
+
+---
+
+### 6️⃣ Acesse com o usuário padrão
+
+Utilize as credenciais abaixo para realizar login:
+
+- **E-mail:** `admin@admin.com`  
+- **Senha:** `123456`
+
+---
